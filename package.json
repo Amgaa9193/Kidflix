@@ -23,17 +23,14 @@
     "lib": "lib",
     "test": "test"
   },
-
   "engines": {
     "node": "12.18.4",
     "npm": "6.14.6"
   },
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --mode=development --watch",
     "postinstall": "webpack --mode=production"
-    
   },
   "repository": {
     "type": "git",

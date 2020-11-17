@@ -1,10 +1,10 @@
 const path = require('path');
 
 module.exports = {
-    context: dirname,
+    context: __dirname,
     entry: './frontend/netflex.jsx',
     output: {
-        path: path.resolve(dirname, 'app', 'assets', 'javascripts'),
+        path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
         filename: 'bundle.js'
     },
     module: {
