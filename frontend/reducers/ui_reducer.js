@@ -5,7 +5,7 @@ const uiReducer = (state = {}, action) => {
     switch (action.type) {
         
         case RECEIVE_EMAIL:
-            // debugger;
+           
             return {email: action.email}
 
         default:

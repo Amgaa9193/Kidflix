@@ -6,7 +6,7 @@ const sessionErrorsReducer = (state = [], action) => {
 
         case RECEIVE_ERRORS:
             return action.errors;
-        // debugger;
+        
         case RECEIVE_CURRENT_USER:
             return []; //setting the errors state to empty array
                     //so logged in user would not see error anymore 

@@ -40,7 +40,7 @@ class EmailForm extends React.Component {
     }
 
     renderErrors() {
-        // debugger;
+
         return(
           <ul>
 

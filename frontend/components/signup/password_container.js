@@ -4,7 +4,6 @@ import { signup, removeErrors, receiveEmail } from '../../actions/session_action
 
 
 const mapStateToProps = (state) => {
-    // debugger;
     return {
         pathType: "/signup",
         errors: state.errors.session,
@@ -14,7 +13,6 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    // debugger;
     return { 
         signup: (user) => {  return dispatch(signup(user))} ,
         removeErrors: () => {dispatch(removeErrors())},

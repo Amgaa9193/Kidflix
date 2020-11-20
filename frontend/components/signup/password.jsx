@@ -32,7 +32,6 @@ class PasswordForm extends React.Component {
     };
 
     renderErrors() {
-        // debugger;
         return(
           <ul>
 
