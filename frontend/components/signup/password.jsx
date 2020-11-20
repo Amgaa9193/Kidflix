@@ -12,6 +12,11 @@ class PasswordForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         
     }
+    
+    componentWillUnmount() {
+        this.props.receiveEmail("");
+        this.props.removeErrors();
+    }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -55,14 +60,14 @@ class PasswordForm extends React.Component {
                         <label> Email:
                            <input type="text" 
                            value={this.state.email}
-                           onChange={this.handleInput('email')}
-                           />
+                           onChange={this.handleInput('email')}/>
                         </label>
                     <br />
                         <label>Password:
                             <input type="password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
+                            placeholder="Enter your password"
                             />
                         </label>
                         <button>Create Account</button>

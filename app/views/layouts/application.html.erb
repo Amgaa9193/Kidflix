@@ -7,6 +7,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script src="https://kit.fontawesome.com/142f4c50a7.js" crossorigin="anonymous"></script>
+    <script>
+      window.logoUrl = "<%= image_url("kidflix_logo.png") %>";
+      window.wallpaperUrl = "<%= image_url("wallpaper.jpeg") %>"
+    </script>
      <% if current_user %>
         <script>
           window.currentUser = {

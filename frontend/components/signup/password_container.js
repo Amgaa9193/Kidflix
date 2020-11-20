@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PasswordForm from './password';
-import { signup } from '../../actions/session_actions';
+import { signup, removeErrors, receiveEmail } from '../../actions/session_actions';
 
 
 const mapStateToProps = (state) => {
@@ -16,11 +16,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     // debugger;
     return { 
-        signup: (user) => { 
-            // debugger;
-            return dispatch(signup(user))
-        } 
-        
+        signup: (user) => {  return dispatch(signup(user))} ,
+        removeErrors: () => {dispatch(removeErrors())},
+        receiveEmail: (email) => dispatch(receiveEmail(email))
     }
 }
 

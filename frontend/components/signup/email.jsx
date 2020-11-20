@@ -1,12 +1,13 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+
+
 
 
 class EmailForm extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            email: ""
+            email: "",
         }
 
       
@@ -15,16 +16,12 @@ class EmailForm extends React.Component {
         
     }
 
+  
+
     handleSubmit(e) {
         e.preventDefault();
-        // debugger;
-        
-        if (this.state.email.length === 0) {
-            
-        }else {
-            this.props.receiveEmail(this.state.email);
-            this.props.history.push("/signup")
-        }
+        this.props.receiveEmail(this.state.email);
+        this.props.history.push("/signup")
     }
 
 
@@ -59,26 +56,36 @@ class EmailForm extends React.Component {
     render() {
       
         return (
-            <div>
-                <header>
-                    <h1>NETFLEX</h1>
-                    <Link to="/signin">Sign In</Link>
-                    <Link to="/browse"><button onClick={this.handleDemo}>Demo User</button></Link>
-                        {/*  this should tak me to browser page*/}
-                    <br />
-                </header>
-
-                <div>
-                    <form onSubmit={this.handleSubmit}>
-                        <label>Email:
-                            <input type="text" 
-                            onChange={this.handleInput('email')}
-                            value={this.state.email}
-                            />
-                        </label>
-                    <button>GET STARTED</button>
-                    </form>
+            <div className="emailform-background">
+                    <img src={window.wallpaperUrl} alt="wallpaper" className="emailform-background" />
+                <div className="Emailpage">
+                    <nav className="Emailform-main-nav">   
+                        <div className="Emailform-left-subnav">
+                            <img src={window.logoUrl} alt="logo" className="Emailpagetop-logo"/>
+                        </div>
+                        <div className="Emailform-right-subnav">
+                            <button onClick={() => this.props.history.push("/signin")} className="Emailform-nav-btn">Sign In</button>
+                            <button onClick={this.handleDemo} className="Emailform-nav-btn">Demo User</button>
+                        </div>
+                    </nav>
+                    <br/>
+                    <div className="Emailpageform-content">
+                        <h1>Unlimited movies, TV shows, and more.</h1>
+                        <p>Watch anywhere. Cancel anytime.</p>
+                        <p>Ready to watch? Enter your email to create or restart your membership</p>
+                        <form onSubmit={this.handleSubmit}>
+                            <label>Email:
+                                <input type="text" 
+                                onChange={this.handleInput('email')}
+                                value={this.state.email}
+                                placeholder="Email address"
+                                required />
+                            </label>
+                            <button className="large-btn">GET STARTED <i className="fas fa-angle-right"></i></button>
+                        </form>
+                    </div>
                 </div>
+
             </div>
         )
     }

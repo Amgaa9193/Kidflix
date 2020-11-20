@@ -1,0 +1,66 @@
+:root {
+    --primary-color: #e50914;
+
+}
+
+.emailform-background {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    position: relative;
+    background: 100%;
+}
+
+.Emailpage {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: whitesmoke;
+    position: absolute;
+    top: 15px;
+}
+
+
+.Emailform-main-nav{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 45px;
+     width: 100vw;
+     margin: 0 45px;
+}
+
+
+.Emailform-left-subnav {
+    display: flex;
+    justify-content: start;
+    align-items: right;
+    height: 37px;
+}
+
+.Emailform-right-subnav {
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+    position: relative;
+    margin-left: 20px;
+}
+
+.Emailform-nav-btn {
+    margin-right: 10px;
+    background-color: var(--primary-color);
+    padding: 5px;
+    color: white;
+    border-radius: 7px;
+}
+
+.Emailpagetop-logo {
+    width: 170px;
+    height: 50px;
+}
+
+.Emailpageform-content {
+   
+    top: 50%;
+    left: 50%;
+}
+
