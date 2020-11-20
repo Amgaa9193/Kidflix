@@ -49,7 +49,7 @@ class PasswordForm extends React.Component {
                 <div>
                     <header>
                         <h3>One last step...</h3>
-                        <h4>Joining Netflex Is Easy!</h4>
+                        <h4>Joining Kidflix Is Easy!</h4>
                         <Link to="/signin">Sign In</Link>
                     </header>
                     

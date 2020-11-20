@@ -1,5 +1,5 @@
 {
-  "name": "Netflex",
+  "name": "kidflix",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.12.3",
@@ -35,13 +35,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Amgaa9193/Netflex.git"
+    "url": "git+https://github.com/Amgaa9193/Kidflix.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Amgaa9193/Netflex/issues"
+    "url": "https://github.com/Amgaa9193/Kidflix/issues"
   },
-  "homepage": "https://github.com/Amgaa9193/Netflex#readme"
+  "homepage": "https://github.com/Amgaa9193/Kidflix#readme"
 }

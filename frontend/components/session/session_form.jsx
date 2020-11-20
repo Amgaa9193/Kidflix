@@ -66,7 +66,7 @@ class SessionForm extends React.Component {
                     <br/>
                     <button>Sign In</button>
 
-                    <p>New to Netflex?</p><Link to="/">Sign up now</Link>
+                    <p>New to Kidflix?</p><Link to="/">Sign up now</Link>
                 </form>
 
             </div>
