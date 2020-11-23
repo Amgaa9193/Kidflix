@@ -1,0 +1,13 @@
+.video-page {
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.video-page-content {
+    position: absolute;
+    margin: 5px;
+    top: 2%;
+    left: 5%;
+}

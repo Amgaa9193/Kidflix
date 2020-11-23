@@ -1,0 +1,30 @@
+.row {
+    margin-left: 20px;
+    color: seashell;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.row-tiles {
+    display: flex;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    padding: 30px;
+}
+
+.row-tiles::-webkit-scrollbar {
+    display: none;
+}
+
+.row-tile {
+    object-fit: contain;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.row-tile:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+

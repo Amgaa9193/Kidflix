@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
         pathType: "/signup",
         errors: state.errors.session,
         //get email prop from ui state
-        email: state.ui.email,
+        email: state.ui.email.email,
     }
 }
 

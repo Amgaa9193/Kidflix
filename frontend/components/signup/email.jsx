@@ -64,8 +64,8 @@ class EmailForm extends React.Component {
                             <img src={window.logoUrl} alt="logo" className="Emailpagetop-logo"/>
                         </div>
                         <div className="Emailform-right-subnav">
-                            <button onClick={() => this.props.history.push("/signin")} className="Emailform-nav-btn">Sign In</button>
                             <button onClick={this.handleDemo} className="Emailform-nav-btn">Demo User</button>
+                            <button onClick={() => this.props.history.push("/signin")} className="Emailform-nav-btn">Sign In</button>
                         </div>
                     </nav>
                     <br/>

@@ -4,11 +4,10 @@
 }
 
 .emailform-background {
-    height: 100vh;
-    width: 100vw;
     margin: 0;
     position: relative;
-    background: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .Emailpage {
@@ -24,9 +23,7 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
-     height: 45px;
      width: 100vw;
-     margin: 0 45px;
 }
 
 
@@ -42,7 +39,6 @@
     justify-content: space-around;
     align-items: right;
     position: relative;
-    margin-left: 20px;
 }
 
 .Emailform-nav-btn {
@@ -54,6 +50,7 @@
 }
 
 .Emailpagetop-logo {
+    position: absolute;
     width: 170px;
     height: 50px;
 }

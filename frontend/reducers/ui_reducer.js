@@ -1,16 +1,8 @@
-import {RECEIVE_EMAIL} from '../actions/session_actions';
+import { combineReducers } from 'redux'
+import modalReducer from './modal_reducer';
+import emailReducer from './email_reducer';
 
-const uiReducer = (state = {}, action) => {
-    Object.freeze(state)
-    switch (action.type) {
-        
-        case RECEIVE_EMAIL:
-           
-            return {email: action.email}
-
-        default:
-            return state;
-    }
-}
-
-export default uiReducer;
+export default combineReducers({
+    email: emailReducer,
+    modals: modalReducer
+  });
