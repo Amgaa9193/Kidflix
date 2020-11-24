@@ -12,6 +12,7 @@ class GenreShow extends React.Component {
     }
 
     render() {
+
         if (this.props.genre) {
             return (
                <div className="genre-show-page">
@@ -19,7 +20,9 @@ class GenreShow extends React.Component {
 
                    <div className="genre-show-page-title">
                         {this.props.genre.title}
+                        
                    </div>
+
                </div>
             )
         } else {

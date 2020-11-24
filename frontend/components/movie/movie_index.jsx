@@ -23,13 +23,14 @@ class MovieIndex extends React.Component {
 
     
     render() {
+        // debugger;
         if (Object.keys(this.props.movies).length <= 1 ) {
             return null
         } else {
             return (
                 <div className="browse">
                     <NavBar logout={this.props.logout}/>
-                    <Banner movies={this.props.movies} history={this.props.history}/>
+                    <Banner movies={Object.values(this.props.movies)} history={this.props.history}/>
                     <div className="movies-by-genre-row">
                         <GenreIndexContainer movies={this.props.movies} history={this.props.history}/>
                     </div>

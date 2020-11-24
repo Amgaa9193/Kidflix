@@ -24,8 +24,8 @@ class NavBar extends React.Component {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu className="dropdown-menu">
-                            <Dropdown.Item><a href="#">Account</a></Dropdown.Item>
-                            <Dropdown.Item className="dropdown-item"> <a onClick={this.props.logout}>Signout</a></Dropdown.Item>
+                            <Dropdown.Item>Account</Dropdown.Item>
+                            <Dropdown.Item className="dropdown-item" onClick={this.props.logout}>Signout</Dropdown.Item>
                         </Dropdown.Menu>
 
                     </Dropdown>

@@ -6,10 +6,10 @@ import {fetchGenre} from '../../actions/genre_actions';
 
 const mapStateToProps = (state, {match}) => {
     const id = match.params.genreId;
-    const genre = state.genres[id];
+    const genre = state.genres[id]
     return {
        id,
-       genre,
+       genre
     }
 }
 

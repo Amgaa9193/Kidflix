@@ -6,7 +6,7 @@ import {fetchMovies, fetchMovie} from '../../actions/movie_actions';
 
 const mapStateToProps = (state) => {
     return {
-        movies: Object.values(state.movies)
+        movies: state.movies
     }
 }
 

@@ -3,9 +3,10 @@ import { ImPlay3 } from 'react-icons/im';
 import { VscInfo } from 'react-icons/vsc';
 
 class Banner extends React.Component {
-    // const i = Math.floor(Math.random())
     render() {
+        // const i = Math.floor(Math.random())
         // debugger;
+
         return (
             <header className="banner">
                 <video muted poster={window.trueUrl} width="100%" height="50%" className="banner">
@@ -20,7 +21,7 @@ class Banner extends React.Component {
                     </div>
 
                     <div className="banner-btn">
-                        <button className="banner-play-btn" onClick={() => {this.props.history.push(`/watch/${37}`)}}> <ImPlay3/> Play</button>
+                        <button className="banner-play-btn" onClick={() => {this.props.history.push(`/watch/${50}`)}}> <ImPlay3/> Play</button>
                         <button className="banner-info-btn"> <VscInfo/>More Info</button>
                     </div>
                 </div>

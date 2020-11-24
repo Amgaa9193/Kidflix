@@ -12,26 +12,21 @@ class Row extends React.Component {
     }
 
     render() {
+        const videoTiles = this.props.ids.map((id, i) => {
+            return (
+                <video key={id} className="row-tile" onClick={() => {this.props.history.push(`/watch/${id}`)}}>
+                    <source src={this.props.movies[id].movieUrl} type="video/mp4"/>
+                </video>
+            )
+        })
+
+        // debugger;
         return (
             <div className="row">
                 <h1 className="row-title" onClick={this.handleClick}>{this.props.genre.title}</h1>
 
                 <div className="row-tiles">
-                    {/* {this.props.ids.map((id, i) => {
-                        this.props.movies.map(movie => {
-                            if (movie.id === id) {
-                                // debugger;
-                                return (
-                                    <video className="row-tile">
-                                        <source src={this.props.movies[i].movieUrl} type="video/mp4"/>
-                                    </video>
-                                )
-                            } 
-                        })
-                    })} */}
-                                <video className="row-tile" onClick={() => {this.props.history.push(`/watch/${39}`)}}>
-                                    <source src={this.props.movies[3].movieUrl} type="video/mp4"/>
-                                </video>
+                    {videoTiles}
                 </div>
             </div>
         )
