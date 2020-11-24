@@ -7,6 +7,7 @@ import PasswordContainer from './signup/password_container'
 import LoginContainer from './session/login_container'
 import MovieindexContainer from './movie/movie_index_container'
 import MovieShowContainer from './movie/movie_show_container'
+import GenreShowContainer from './genre/genre_show_container'
 
 
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
        <AuthRoute path="/signin" component={LoginContainer}/>
        <ProtectedRoute path="/browse" component={MovieindexContainer}/>
        <ProtectedRoute path="/watch/:movieId" component={MovieShowContainer}/>
+       <ProtectedRoute exact path="/genre/:genreId" component={GenreShowContainer}/>
 
    </Switch>
 )

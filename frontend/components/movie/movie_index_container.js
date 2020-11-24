@@ -5,7 +5,6 @@ import {fetchMovies, fetchMovie} from '../../actions/movie_actions';
 
 
 const mapStateToProps = (state) => {
-    // debugger;
     return {
         movies: Object.values(state.movies)
     }

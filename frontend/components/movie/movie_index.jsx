@@ -1,8 +1,7 @@
 import React from 'react'
 import NavBar from '../nav/nav'
 import Banner from './banner'
-import Row from './row'
-
+import GenreIndexContainer from '../genre/genre_index_container';
 
 class MovieIndex extends React.Component {
     constructor(props) {
@@ -11,8 +10,10 @@ class MovieIndex extends React.Component {
     }
 
     componentDidMount() {
+        // debugger;
         this.props.fetchMovies()
     };
+
 
     handleClick(e) {
         e.preventDefault();
@@ -22,21 +23,16 @@ class MovieIndex extends React.Component {
 
     
     render() {
-        if (Object.keys(this.props.movies).length === 0 ) {
-            return <div></div>
+        if (Object.keys(this.props.movies).length <= 1 ) {
+            return null
         } else {
             return (
                 <div className="browse">
                     <NavBar logout={this.props.logout}/>
                     <Banner movies={this.props.movies} history={this.props.history}/>
-                    <div>
-                       <Row title="Action" movies={this.props.movies} history={this.props.history}/>
-                       <Row title="Educational" movies={this.props.movies} history={this.props.history}/>
-                       <Row title="Social Skills" movies={this.props.movies} history={this.props.history}/>
-                       <Row title="Adventure" movies={this.props.movies} history={this.props.history}/>
-                       <Row title="She Does It Her Way" movies={this.props.movies} history={this.props.history}/>
+                    <div className="movies-by-genre-row">
+                        <GenreIndexContainer movies={this.props.movies} history={this.props.history}/>
                     </div>
-
                 </div>
             )
         }

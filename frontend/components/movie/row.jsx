@@ -4,23 +4,34 @@ class Row extends React.Component {
     constructor(props) {
         super(props)
 
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(){
+        this.props.history.push(`/genre/${this.props.genre.id}`)
     }
 
     render() {
-        // debugger;
         return (
             <div className="row">
-                <strong>{this.props.title}</strong>
+                <h1 className="row-title" onClick={this.handleClick}>{this.props.genre.title}</h1>
 
                 <div className="row-tiles">
-                    {this.props.movies.map(movie => {
-                        
-                        return (
-                            <video key={movie.id} className="row-tile" onClick={() => {this.props.history.push(`/watch/${movie.id}`)}}>
-                                <source src={movie.movieUrl} type="video/mp4"/>
-                            </video>
-                        )
-                    })}
+                    {/* {this.props.ids.map((id, i) => {
+                        this.props.movies.map(movie => {
+                            if (movie.id === id) {
+                                // debugger;
+                                return (
+                                    <video className="row-tile">
+                                        <source src={this.props.movies[i].movieUrl} type="video/mp4"/>
+                                    </video>
+                                )
+                            } 
+                        })
+                    })} */}
+                                <video className="row-tile" onClick={() => {this.props.history.push(`/watch/${39}`)}}>
+                                    <source src={this.props.movies[3].movieUrl} type="video/mp4"/>
+                                </video>
                 </div>
             </div>
         )
@@ -28,3 +39,4 @@ class Row extends React.Component {
 }
 
 export default Row;
+

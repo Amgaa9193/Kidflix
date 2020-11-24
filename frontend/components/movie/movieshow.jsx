@@ -12,6 +12,7 @@ class MovieShow extends React.Component {
     }
 
     render() {
+        if (this.props.movie) {
             return (
                 <div className="video-page">
                     <video controls autoPlay key={this.props.movie.id} width="100%" className="video-page">
@@ -22,6 +23,11 @@ class MovieShow extends React.Component {
                     </div>
                 </div>
             )
+        } else {
+            return (
+                <p>Loading...</p>
+            )
+        }
     }
 }
 
