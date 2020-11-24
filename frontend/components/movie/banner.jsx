@@ -21,7 +21,7 @@ class Banner extends React.Component {
                     </div>
 
                     <div className="banner-btn">
-                        <button className="banner-play-btn" onClick={() => {this.props.history.push(`/watch/${50}`)}}> <ImPlay3/> Play</button>
+                        <button className="banner-play-btn" onClick={() => {this.props.history.push(`/watch/${52}`)}}> <ImPlay3/> Play</button>
                         <button className="banner-info-btn"> <VscInfo/>More Info</button>
                     </div>
                 </div>
