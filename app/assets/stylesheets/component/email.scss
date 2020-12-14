@@ -1,62 +1,59 @@
 :root {
-    --primary-color: #e50914;
-
+  --primary-color: #e50914;
 }
 
 .emailform-background {
-    margin: 0;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+  margin: 0;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 .Emailpage {
-    font-family: Arial, Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    color: whitesmoke;
-    position: absolute;
-    top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: whitesmoke;
+  position: absolute;
+  top: 15px;
 }
 
-
-.Emailform-main-nav{
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     width: 100vw;
+.Emailform-main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
 }
-
 
 .Emailform-left-subnav {
-    display: flex;
-    justify-content: start;
-    align-items: right;
-    height: 37px;
+  display: flex;
+  justify-content: start;
+  align-items: right;
+  height: 37px;
 }
 
 .Emailform-right-subnav {
-    display: flex;
-    justify-content: space-around;
-    align-items: right;
-    position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: right;
+  position: relative;
 }
 
 .Emailform-nav-btn {
-    margin-right: 10px;
-    background-color: var(--primary-color);
-    padding: 5px;
-    color: white;
-    border-radius: 7px;
+  margin-right: 10px;
+  background-color: var(--primary-color);
+  padding: 5px;
+  color: white;
+  border-radius: 7px;
 }
 
 .Emailpagetop-logo {
-    position: absolute;
-    width: 170px;
-    height: 50px;
+  position: absolute;
+  width: 170px;
+  height: 50px;
 }
 
 .Emailpageform-content {
-   
-    top: 50%;
-    left: 50%;
+  position: absolute;
+  top: 300px;
+  left: 40%;
 }

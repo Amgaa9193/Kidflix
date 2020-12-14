@@ -1,2 +1,1 @@
-json.extract! @movie, :id, :title, :rating, :description, :duration
-json.movieUrl url_for(@movie.clip)
+json.partial! 'api/movies/movie', movie: @movie 

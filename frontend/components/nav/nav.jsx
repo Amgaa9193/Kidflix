@@ -10,9 +10,7 @@ class NavBar extends React.Component {
             <div className="nav">
                 <div className="navbar-links">
                         <Link to="/browse"><img src={window.logoUrl} alt="logo" className="nav-logo"/></Link>
-                        <a href="#" className="links">Movies</a>
-                        <a href="#" className="links">Latest</a>
-                        <a href="#" className="links">MyList</a>
+                        <Link to="/mylist">MyList</Link>
                         <a href="#" className="links"><HiSearch/></a>
                 </div>
 
