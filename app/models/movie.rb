@@ -23,7 +23,20 @@ class Movie < ApplicationRecord
     through: :genrelinks,
     source: :genre
 
+    has_many :my_lists,
+    foreign_key: :movie_id,
+    class_name: :MyList,
+    dependent: :destroy
+
+    has_many :users,
+    through: :my_lists,
+    source: :user
+
     has_one_attached :clip
+
+    def on_my_list(user)
+        !!MyList.find_by(user_id: user.id, movie_id: self.id)
+    end 
 
 
 

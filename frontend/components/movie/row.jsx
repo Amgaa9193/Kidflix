@@ -12,7 +12,7 @@ class Row extends React.Component {
     }
 
     render() {
-        const videoTiles = this.props.ids.map((id, i) => {
+        const videoTiles = this.props.ids.map((id) => {
             return (
                 <video key={id} className="row-tile" onClick={() => {this.props.history.push(`/watch/${id}`)}}>
                     <source src={this.props.movies[id].movieUrl} type="video/mp4"/>

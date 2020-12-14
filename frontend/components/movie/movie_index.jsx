@@ -29,7 +29,7 @@ class MovieIndex extends React.Component {
         } else {
             return (
                 <div className="browse">
-                    <NavBar logout={this.props.logout}/>
+                    <NavBar logout={this.props.logout} history={this.props.history}/>
                     <Banner movies={Object.values(this.props.movies)} history={this.props.history}/>
                     <div className="movies-by-genre-row">
                         <GenreIndexContainer movies={this.props.movies} history={this.props.history}/>
