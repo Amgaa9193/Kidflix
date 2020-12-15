@@ -1,17 +1,20 @@
 import MyListIndex from './mylistindex';
 import {connect} from 'react-redux';
-import {fetchMyLists, removeMyList} from '../../actions/mylist_actions';
+import {fetchMyLists, removeMyList, createMyList} from '../../actions/mylist_actions';
+import {fetchMovies} from '../../actions/movie_actions';
 
 const mapStateToProps = (state) => {
-    debugger;
+    // debugger;
     return {
-        mylists: state.mylists
+        movies: state.movies,
+        mylists: state.mylists.mylists
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchMyLists: () => dispatch(fetchMyLists()),
+        fetchMovies: () => dispatch(fetchMovies()),
         removeMyList: (mylistId) => dispatch(removeMyList(mylistId))
     }
 };

@@ -10,7 +10,7 @@ require 'open-uri'
 User.destroy_all;
 
 
-User.create!(       
+demo = User.create!(       
      email: 'demoUser@yahoo.com',    
      password_digest: BCrypt::Password.create('password'),    
      session_token: SecureRandom.base64
@@ -181,3 +181,27 @@ she_does_it = Genre.create!(title: "She Does It Her Way")
  Genrelink.create(movie_id: m5.id, genre_id: she_does_it.id)
  Genrelink.create(movie_id: m6.id, genre_id: she_does_it.id)
  Genrelink.create(movie_id: m9.id, genre_id: she_does_it.id)
+
+
+MyList.destroy_all;
+
+ml1 = MyList.create!(
+     user_id: demo.id, 
+     movie_id: m1.id
+);
+
+ml2 = MyList.create!(
+     user_id: demo.id, 
+     movie_id: m5.id
+);
+
+ml3 = MyList.create!(
+     user_id: demo.id, 
+     movie_id: m7.id
+);
+
+ml4 = MyList.create!(
+     user_id: demo.id, 
+     movie_id: m9.id
+);
+

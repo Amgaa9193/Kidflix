@@ -1,4 +1,5 @@
 import React from 'react'
+import { removeMyList, createMyList} from '../../actions/mylist_actions';
 
 class Row extends React.Component {
     constructor(props) {
@@ -12,11 +13,21 @@ class Row extends React.Component {
     }
 
     render() {
+
         const videoTiles = this.props.ids.map((id) => {
+            let icon;
+            if(this.props.movies[id].onMyList === true) {
+                icon = <i className="fas fa-check-circle"></i>
+            } else {
+                icon = <i className="fas fa-plus-circle"></i>
+            }
             return (
-                <video key={id} className="row-tile" onClick={() => {this.props.history.push(`/watch/${id}`)}}>
-                    <source src={this.props.movies[id].movieUrl} type="video/mp4"/>
-                </video>
+                <div  key={id}>
+                    <video className="row-tile" onClick={() => {this.props.history.push(`/watch/${id}`)}}>
+                        <source src={this.props.movies[id].movieUrl} type="video/mp4"/>
+                    </video>
+                    <button>{icon}</button>
+                </div>
             )
         })
 

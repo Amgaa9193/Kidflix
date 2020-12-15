@@ -1,5 +1,5 @@
 json.extract! user, :id, :email
 
-json.mylistMovieIds user.movie_ids 
+json.mylistIds user.my_list_ids 
 
 

@@ -1,0 +1,28 @@
+// h1 {
+// 	margin-top: 70px;
+// 	font-size: 50px;
+// 	color: seashell;
+// 	position: absolute;
+// 	top: 5%;
+// 	left: 0%;
+// }
+
+.mylist-page {
+	padding-top: 200px;
+	position: relative;
+	background-color: #111111;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: start;
+	align-content: flex-start;
+	flex-wrap: wrap;
+
+	.mylist-movie {
+		height: 250px;
+
+		video {
+			width: 400px;
+		}
+	}
+}
