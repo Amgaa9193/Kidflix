@@ -5,7 +5,8 @@ class Api::MyListsController < ApplicationController
     # end 
 
     def index 
-        @movies = Movie.joins(:my_lists).where('my_lists.user_id = ?', current_user.id)
+        # @movies = Movie.joins(:my_lists).where('my_lists.user_id = ?', current_user.id)
+        @mylists = MyList.where('my_lists.user_id = ?', current_user.id)
         render :index
         # /mylist 
     end 

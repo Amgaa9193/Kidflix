@@ -15,7 +15,7 @@ class GenreShow extends React.Component {
     render() {
             const movies = this.props.genre.movieIds.map((id) => {
                 return (
-                    <video height="50%" width="50%" controls key={id} onClick={() => {this.props.history.push(`/watch/${id}`)}}>
+                    <video height="50%" width="50%" key={id} onClick={() => {this.props.history.push(`/watch/${id}`)}}>
                         <source src={this.props.movies[id].movieUrl} type="video/mp4"/>
                     </video>
                 )
