@@ -14,6 +14,7 @@ class MyListIndex extends React.Component {
 
     handleClick() {
         this.props.removeMyList()
+        // this works in a wrong way
     }
 
     
