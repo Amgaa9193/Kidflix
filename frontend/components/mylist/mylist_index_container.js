@@ -13,8 +13,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        // to fetch all the movie belongs to this user
         fetchMyLists: () => dispatch(fetchMyLists()),
+        // to fetch all the movies in the data base? is there a better way
         fetchMovies: () => dispatch(fetchMovies()),
+    
         removeMyList: (mylistId) => dispatch(removeMyList(mylistId))
     }
 };
