@@ -12,7 +12,7 @@ end
 
 json.mylists arr
  
-
+# need the array of my list 
 # json.user do 
 #     json.partial! "api/users/user", user: current_user
 # end 
