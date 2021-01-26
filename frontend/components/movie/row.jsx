@@ -17,7 +17,7 @@ class Row extends React.Component {
         const videoTiles = this.props.ids.map((id) => {
             let icon;
             if(this.props.movies[id].onMyList === true) {
-                icon = <i className="fas fa-check-circle"></i>
+                icon = <i className="fas fa-check-circle"></i>;
             } else {
                 icon = <i className="fas fa-plus-circle"></i>
             }
