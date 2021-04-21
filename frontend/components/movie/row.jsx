@@ -6,11 +6,22 @@ class Row extends React.Component {
         super(props)
 
         this.handleClick = this.handleClick.bind(this);
+        // this.handleListButtonClick = this.handleListButtonClick.bind(this);
     }
 
     handleClick(){
         this.props.history.push(`/genre/${this.props.genre.id}`)
     }
+
+    // handleListButtonClick(id) {
+    //     // this.props.ids.map((id) => {
+    //         if(this.props.movies[id].onMyList === true) {
+    //             this.props.removeMyList(id); //to remove a mylist it needs a mylist.id?
+    //         } else {
+    //             this.props.createMyList(id);
+    //         }
+    //     // })
+    // }
 
     render() {
 
@@ -26,7 +37,7 @@ class Row extends React.Component {
                     <video className="row-tile" onClick={() => {this.props.history.push(`/watch/${id}`)}}>
                         <source src={this.props.movies[id].movieUrl} type="video/mp4"/>
                     </video>
-                    <button>{icon}</button>
+                    {/* <button onClick={() => this.handleListButtonClick(this.props.movies[id])}> {icon}</button> */}
                 </div>
             )
         })

@@ -25,7 +25,8 @@ class Api::MyListsController < ApplicationController
     def destroy 
         my_list = MyList.find(params[:id])
         my_list.destroy 
-        render :show
+        @mylists = MyList.where('my_lists.user_id = ?', current_user.id)
+        render :index
     end 
 
     private
