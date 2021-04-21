@@ -53,6 +53,6 @@ export const createMyList = (mylist) => {
 export const removeMyList = (mylistId) => {
     return dispatch => {
         deleteMyList(mylistId)
-        .then((mylist) => dispatch(destroyMyList(mylist.id)))
+        .then(() => dispatch(destroyMyList(mylistId)))
     }
 };
