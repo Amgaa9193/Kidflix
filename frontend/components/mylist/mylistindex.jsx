@@ -4,7 +4,7 @@ import NavBar from '../nav/nav';
 class MyListIndex extends React.Component {
     constructor(props){
         super(props)
-        this.state = { update: false };
+        // this.state = { update: false };
         this.handleClick = this.handleClick.bind(this);
     }
 

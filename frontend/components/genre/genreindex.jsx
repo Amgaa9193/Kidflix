@@ -1,5 +1,6 @@
 import React from 'react'
-import Row from '../movie/row'
+import RowContainer from '../movie/row_container'
+// import Row from '../movie/row'
 
 class GenreIndex extends React.Component {
     componentDidMount() {
@@ -10,7 +11,7 @@ class GenreIndex extends React.Component {
             const genres = this.props.genres.map(genre => {
                 return (
                    <li  key={genre.id}>
-                       <Row genre={genre} 
+                       <RowContainer genre={genre} 
                             ids={genre.movieIds} 
                             movies={this.props.movies} 
                             history={this.props.history}
