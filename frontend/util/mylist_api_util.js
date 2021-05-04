@@ -5,11 +5,11 @@ export const getMyLists = () => {
     })
 };
 
-export const postMyList = (mylist) => {
+export const postMyList = (movieId) => {
     return $.ajax({
         method: "POST",
         url: '/api/my_lists',
-        data: {mylist: mylist}
+        data: {movieId: movieId}
     })
 }
 

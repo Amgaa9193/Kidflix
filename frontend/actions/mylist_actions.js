@@ -42,10 +42,10 @@ export const fetchMyLists = () => {
 };
 
 
-export const createMyList = (mylist) => {
+export const createMyList = (movieId) => {
     return dispatch => {
-        postMyList(mylist)
-        .then(mylist => dispatch(receiveMylist(mylist)))
+        postMyList(movieId)
+        .then(newMylist => dispatch(receiveMylist(newMylist)))
     }
 };
 

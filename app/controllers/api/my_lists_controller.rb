@@ -15,8 +15,8 @@ class Api::MyListsController < ApplicationController
         @my_list = MyList.new(mylist_params)
         @my_list.user_id = current_user.id 
 
-        if @my_list.save 
-            render :show
+        if @my_list.save
+            render "/api/movies/movie"
         else 
             render json: ['error'], status: 404 
         end 
@@ -31,6 +31,6 @@ class Api::MyListsController < ApplicationController
 
     private
     def mylist_params
-        self.params.require(:my_list).permit(:movie_id)
+        params.require(:my_list).permit(:movie_id)
     end 
 end

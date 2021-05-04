@@ -1,30 +1,41 @@
 import React from 'react'
-import { removeMyList, createMyList} from '../../actions/mylist_actions';
+
 
 class Row extends React.Component {
     constructor(props) {
+        debugger;
         super(props)
-
+        console.log(props)
         this.handleClick = this.handleClick.bind(this);
-        // this.handleListButtonClick = this.handleListButtonClick.bind(this);
+        this.handleListButtonClick = this.handleListButtonClick.bind(this);
     }
+
+    componentDidMount() {
+        debugger;
+        this.props.fetchMyLists()
+    };
 
     handleClick(){
         this.props.history.push(`/genre/${this.props.genre.id}`)
     }
 
-    // handleListButtonClick(id) {
-    //     // this.props.ids.map((id) => {
-    //         if(this.props.movies[id].onMyList === true) {
-    //             this.props.removeMyList(id); //to remove a mylist it needs a mylist.id?
-    //         } else {
-    //             this.props.createMyList(id);
-    //         }
-    //     // })
-    // }
+    handleListButtonClick(id) {
+        // this.props.ids.map((id) => {
+            // debugger;
+            if(this.props.movies[id].onMyList === true) {
+                // this.props.mylist.map((id, movie_id) => 
+                //   if (movie_id === this.props.movies[id]{
+                //     this.props.removeMyList(id)
+                //  })); //to remove a mylist it needs a mylist.id?
+            } else {
+                debugger;
+                this.props.createMyList(id);
+            }
+        // })
+    }
 
     render() {
-
+        debugger;
         const videoTiles = this.props.ids.map((id) => {
             let icon;
             if(this.props.movies[id].onMyList === true) {
@@ -37,13 +48,14 @@ class Row extends React.Component {
                     <video className="row-tile" onClick={() => {this.props.history.push(`/watch/${id}`)}}>
                         <source src={this.props.movies[id].movieUrl} type="video/mp4"/>
                     </video>
-                    {/* <button onClick={() => this.handleListButtonClick(this.props.movies[id])}> {icon}</button> */}
+                    <button onClick={() => this.handleListButtonClick(this.props.movies[id].id)}> {icon}</button>
                 </div>
             )
         })
 
         // debugger;
         return (
+        
             <div className="row">
                 <h1 className="row-title" onClick={this.handleClick}>{this.props.genre.title}</h1>
 
