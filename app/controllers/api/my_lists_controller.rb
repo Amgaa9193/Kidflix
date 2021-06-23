@@ -12,11 +12,12 @@ class Api::MyListsController < ApplicationController
     end 
 
     def create 
+        # byebug
         @my_list = MyList.new(mylist_params)
         @my_list.user_id = current_user.id 
-
+        
         if @my_list.save
-            render "/api/movies/movie"
+            render :show
         else 
             render json: ['error'], status: 404 
         end 

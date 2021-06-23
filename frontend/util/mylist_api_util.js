@@ -9,7 +9,8 @@ export const postMyList = (movieId) => {
     return $.ajax({
         method: "POST",
         url: '/api/my_lists',
-        data: {movieId: movieId}
+        // data: {movieId: movieId}
+        data: {my_list: {movie_id: movieId}}
     })
 }
 

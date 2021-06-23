@@ -1,0 +1,1 @@
+// get all the movies here from the redux store

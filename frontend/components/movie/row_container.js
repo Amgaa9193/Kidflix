@@ -5,14 +5,14 @@ import {fetchMyLists, createMyList, removeMyList} from '../../actions/mylist_act
 const mapStateToProps = (state) => {
     debugger;
     return {
-        mylist: state.mylists
+        mylist: state.entities.users.mylistIds
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
     debugger;
     return {
-        fetchMyLists: () => dispatch(fetchMyLists()),
+        // fetchMyLists: () => dispatch(fetchMyLists()),
         createMyList: (movieId) => dispatch(createMyList(movieId)),
         removeMyList: (mylistId) => dispatch(removeMyList(mylistId))
     }

@@ -10,10 +10,10 @@ class Row extends React.Component {
         this.handleListButtonClick = this.handleListButtonClick.bind(this);
     }
 
-    componentDidMount() {
-        debugger;
-        this.props.fetchMyLists()
-    };
+    // componentDidMount() {
+    //     // debugger;
+    //     this.props.fetchMyLists()
+    // };
 
     handleClick(){
         this.props.history.push(`/genre/${this.props.genre.id}`)
@@ -28,7 +28,7 @@ class Row extends React.Component {
                 //     this.props.removeMyList(id)
                 //  })); //to remove a mylist it needs a mylist.id?
             } else {
-                debugger;
+                // debugger;
                 this.props.createMyList(id);
             }
         // })

@@ -21,9 +21,7 @@ class MyListIndex extends React.Component {
     };
 
     handleClick(id) {
-        // debugger;
         this.props.removeMyList(id)
-        // this works in a wrong way
     }
 
     
