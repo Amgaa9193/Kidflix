@@ -3,16 +3,16 @@ import { connect } from 'react-redux';
 import {fetchMyLists, createMyList, removeMyList} from '../../actions/mylist_actions';
 
 const mapStateToProps = (state) => {
-    debugger;
+    // debugger;
     return {
         mylist: state.entities.users.mylistIds
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
-    debugger;
+    // debugger;
     return {
-        // fetchMyLists: () => dispatch(fetchMyLists()),
+        fetchMyLists: () => dispatch(fetchMyLists()),
         createMyList: (movieId) => dispatch(createMyList(movieId)),
         removeMyList: (mylistId) => dispatch(removeMyList(mylistId))
     }
