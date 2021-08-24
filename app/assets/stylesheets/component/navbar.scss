@@ -1,62 +1,60 @@
 .nav {
-    position: fixed;
-    top: 0%;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    padding: 23px;
-    z-index: 1;
-    // background-color: #111;
-    // belove is code for scrolling animation
-    // transition-timing-function: ease-in;
-    // transition: all o.3s;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 23px;
+  z-index: 1;
+  // background-color: #111;
+  // belove is code for scrolling animation
+  // transition-timing-function: ease-in;
+  // transition: all o.3s;
 }
 // later when u add more styling make sure this scrolling works
 // .nav-black {
-//     
+//
 // }
 
-
-// belove is na bar links 
+// belove is na bar links
 .navbar-links {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .links {
-   display: flex;
-   padding: 5px;
+  display: flex;
+  padding: 5px;
 }
 
 .nav-logo {
-    width: 80px;
-    object-fit: contain;
+  width: 80px;
+  object-fit: contain;
 }
 
 .nav-logo:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-
-
-
-// belove is drop down 
+// belove is drop down
 .nav-avatar {
-    width: 30px;
-    object-fit: contain;
+  width: 30px;
+  object-fit: contain;
 }
 
 .navbar-dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 // .navbar-dropdown:hover {
 //     display: block;
 // }
 
-.dropdown-menu{
-    position: absolute;
-    display: block;
-    background: none;
+.dropdown-menu {
+  position: absolute;
+  display: block;
+  background: none;
 }
