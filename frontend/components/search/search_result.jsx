@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import NavBar from "../nav/nav";
 
 const SearchResult = ({ searchresults, history }) => {
-  console.log(searchresults);
+  // console.log(searchresults);
   // useEffect(() => {});
   const videos = searchresults.map((result, i) => {
     return (
